@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>0b6a6a05-61fd-424e-be9a-a4cb0cbd0992</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.1.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.1.2" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.ApiAuthorization.IdentityServer" Version="6.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="6.0.7" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="6.0.7" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.16.1" />
+    <PackageReference Include="NLog" Version="5.0.1" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.0.0" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Config\acme.sistemas.compracoletiva.config\acme.sistemas.compracoletiva.config.csproj" />
+    <ProjectReference Include="..\..\Core\acme.sistemas.compracoletiva.di\acme.sistemas.compracoletiva.di.csproj" />
+  </ItemGroup>
+
+</Project>

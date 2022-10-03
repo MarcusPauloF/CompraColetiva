@@ -1,0 +1,123 @@
+﻿@model IEnumerable<acme.sistemas.compracoletiva.core.Dtos.Product.OfertaDto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<!-- Google Font: Source Sans Pro -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.min.css">
+<!-- DataTables -->
+<link rel="stylesheet" href="~/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" href="~/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+<link rel="stylesheet" href="~/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+<!-- Theme style -->
+<link rel="stylesheet" href="~/dist/css/adminlte.min.css">
+<link rel="stylesheet" type="text/css" href="~/dt/DataTables/datatables.min.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.12.1/datatables.min.css" />
+
+<div class="card-body">
+
+    <h1>Index</h1>
+
+    <p>
+        <a asp-action="Create" class="btn btn-primary">Cadastrar</a>
+    </p>
+
+    <table id="example1" class=" table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Titulo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Descricao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Condicao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataInicio)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataTermino)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ValorProduto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ValorComDesconto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.QuantidadeOfertaDisponivel)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Titulo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descricao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Condicao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataInicio)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataTermino)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ValorProduto)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ValorComDesconto)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.QuantidadeOfertaDisponivel)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<!-- jQuery -->
+<script src="~/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="~/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="~/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="~/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="~/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="~/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="~/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="~/plugins/jszip/jszip.min.js"></script>
+<script src="~/plugins/pdfmake/pdfmake.min.js"></script>
+<script src="~/plugins/pdfmake/vfs_fonts.js"></script>
+<script src="~/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="~/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="~/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- AdminLTE App -->
+<script src="~/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="~/dist/js/demo.js"></script>
+<!-- Page specific script -->
+
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.12.1/datatables.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#example1').DataTable();
+    });
+</script>
